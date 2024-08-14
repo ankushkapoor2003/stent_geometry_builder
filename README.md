@@ -1,4 +1,4 @@
-# Stent Geometry Builders for IR and HS Designs
+# 3D Geometry Builders for Independent Ring and Helical Stent Designs
 
 ## Overview
 
