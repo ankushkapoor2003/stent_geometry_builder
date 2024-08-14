@@ -1,4 +1,4 @@
-# Stent Geometry Builders for IR1 and HS1 Designs
+# Stent Geometry Builders for IR and HS Designs
 
 ## Overview
 
@@ -11,7 +11,7 @@ This repository contains the geometry builders for the IR1 and HS1 stent designs
 The geometry builder requires the following software to be installed. 
 
 - **MATLAB2023b** 
-- **Anaconda for Python integration**
+- **Anaconda**
 -  **Solidworks 2024**
 
 The builder is tested only on the software versions listed above.
@@ -24,68 +24,57 @@ Clone this repository to your local machine:
 git clone https://github.com/yourusername/stent-geometry-builder.git
 cd stent-geometry-builder
 ```
-### Setting up the Python environment
+### Setting up the solidworks integration Python environment and corresponding modules. 
 
-1. 
-### Setting Up IR1 Geometry Builder
-
-1. Navigate to the `ir1` directory:
-    ```bash
-    cd ir1
+1. Open the anaconda prompt and navigate to the cloned directory location using cd command
+    ```conda
+    cd '\\ stent geometry builder location \\'
     ```
-2. Ensure all the required MATLAB functions are present in the `ir1` folder.
 
-3. In MATLAB, add the `ir1` folder to your MATLAB path:
+2. Create a new conda environent with Python 3.9.18 
+    ```conda
+    conda create --name Sldwrks_Integration python=3.9.18
+    ```
+
+3. Activate the created conda environemnt
+    ```conda
+    conda activate Sldwrks_Integration
+    ```
+
+4. Install the sld_interface package and its dependencies in the Sldwrks_integration environment
+    ```conda
+    python -m pip install ".\Solidworks_library\sld_interface"
+    ```
+
+5. Retrieve the location of the python executable of the conda environement using the following command
+    ```conda
+    where python
+    ```
+    The command may show multiple python locations, copy the path within your generated conda environment
+
+6. Open Matlab and change the matlab python environment to the newly generated one by running the following in command window
     ```matlab
-    addpath(genpath('path_to_your_cloned_repo/ir1'));
+    pyenv('Version', '\\ Path to the python executable retrieved from step 5 \\')
     ```
 
-4. Call the main geometry builder script:
-    ```matlab
-    main_ir1(input_parameters);
-    ```
+NB: Please note that the python library assumes that solidworks is installed in the default location i.e. "C:\Program Files\SOLIDWORKS Corp\SOLIDWORKS\SLDWORKS.exe". if the solidworks executable is at a different location, change the location in the solidworks library file located at "\stent geometry builder location\Solidworks_Library\sld_interface\sld_interface\sld.py", line 11. Similarly, the default solidworks template used for loading new document is assumed at the location "C:\ProgramData\SolidWorks\SOLIDWORKS 2024\templates\Part.prtdot". Kindly update line 503 in sld.py if the location is different. 
 
-### Setting Up HS1 Geometry Builder
+## Using Geometry builder to create stent designs
 
-1. Navigate to the `hs1` directory:
-    ```bash
-    cd hs1
-    ```
-2. Ensure all the required MATLAB functions are present in the `hs1` folder.
+1. Navigate to the cloned geometry builder directory in windows explorer:
 
-3. In MATLAB, add the `hs1` folder to your MATLAB path:
-    ```matlab
-    addpath(genpath('path_to_your_cloned_repo/hs1'));
-    ```
+2. Open the corresponding matlab file for IR stent (Main_IR1) or Helical stent (Main_HS1)
 
-4. Call the main geometry builder script:
-    ```matlab
-    main_hs1(input_parameters);
-    ```
+3. Either keep or modify the baseline design variable values (x) in the matlab script
 
-## Running the Geometry Builders
+4. Run the matlab script
 
-### IR1 Geometry Builder
+5. Three stent CAD files - Solidworks part file (.SLDPRT), neutral parasolid file (.x_t) and a stl file (.STL) will be saved in the corresponding results folder for IR stent (IR1_Results) or HS stent (HS1_Results)
 
-1. **Set up the input parameters** required for your stent design.
-2. **Run the `main_ir1` script**:
-    ```matlab
-    main_ir1(input_parameters);
-    ```
-3. The output stent geometry will be saved in the `results` directory, which is automatically created in the current working directory.
-
-### HS1 Geometry Builder
-
-1. **Set up the input parameters** required for your stent design.
-2. **Run the `main_hs1` script**:
-    ```matlab
-    main_hs1(input_parameters);
-    ```
-3. The output stent geometry will be saved in the `results` directory, which is automatically created in the current working directory.
 
 ## Citing This Work
 
-If you use these geometry builders in your research, please cite the following paper:
+If you use these geometry builders in your research, condsider citing the paper:
 
 ```
 @article{YourPaper,
@@ -105,7 +94,7 @@ You can also cite the software using the Zenodo DOI:
 ```
 @software{YourSoftware,
     author = {Your Name and Coauthors},
-    title = {Stent Geometry Builders for IR1 and HS1 Designs},
+    title = {Stent Geometry Builders for IR and HS Designs},
     year = {2024},
     doi = {DOI of the Zenodo Release}
 }
