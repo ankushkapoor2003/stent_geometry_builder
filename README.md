@@ -10,7 +10,7 @@ This repository contains the geometry builders for the IR1 and HS1 stent designs
 
 The geometry builder requires the following software to be installed. 
 
-- **MATLAB2023b** 
+- **MATLAB 2023b** 
 - **Anaconda**
 -  **Solidworks 2024**
 
@@ -57,24 +57,24 @@ cd stent-geometry-builder
     pyenv('Version', '\\ Path to the python executable retrieved from step 5 \\')
     ```
 
-NB: Please note that the python library assumes that solidworks is installed in the default location i.e. "C:\Program Files\SOLIDWORKS Corp\SOLIDWORKS\SLDWORKS.exe". if the solidworks executable is at a different location, change the location in the solidworks library file located at "\stent geometry builder location\Solidworks_Library\sld_interface\sld_interface\sld.py", line 11. Similarly, the default solidworks template used for loading new document is assumed at the location "C:\ProgramData\SolidWorks\SOLIDWORKS 2024\templates\Part.prtdot". Kindly update line 503 in sld.py if the location is different. 
+NB: Please note that the Python library assumes that Solidworks is installed in the default location i.e. "C:\Program Files\SOLIDWORKS Corp\SOLIDWORKS\SLDWORKS.exe". if the solidworks executable is at a different location, change the location in the Solidworks library file located at "\stent geometry builder location\Solidworks_Library\sld_interface\sld_interface\sld.py", line 11. Similarly, the default solidworks template used for loading new document is assumed to be "C:\ProgramData\SolidWorks\SOLIDWORKS 2024\templates\Part.prtdot". Kindly update line 503 in sld.py if the location is different. 
 
 ## Using Geometry builder to create stent designs
 
 1. Navigate to the cloned geometry builder directory in windows explorer:
 
-2. Open the corresponding matlab file for IR stent (Main_IR1) or Helical stent (Main_HS1)
+2. Open the corresponding Matlab file for IR stent (Main_IR1) or Helical stent (Main_HS1)
 
-3. Either keep or modify the baseline design variable values (x) in the matlab script
+3. Either keep or modify the baseline design variable values (x) in the Matlab script
 
-4. Run the matlab script
+4. Run the Matlab script
 
 5. Three stent CAD files - Solidworks part file (.SLDPRT), neutral parasolid file (.x_t) and a stl file (.STL) will be saved in the corresponding results folder for IR stent (IR1_Results) or HS stent (HS1_Results)
 
 
 ## Citing This Work
 
-If you use these geometry builders in your research, condsider citing the paper:
+If you use these geometry builders in your research, consider citing the paper:
 
 ```
 @article{YourPaper,
