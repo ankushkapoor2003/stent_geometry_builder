@@ -21,11 +21,19 @@ Research paper citation:
 ```
 Software citation:
 ```
-@software{Kapoor20243D,
-    author = {Kapoor, A. and Ray, T. and Jepson, N. and Beier, S.},
-    title = {3D geometry builder for Independent Ring and Helical stent designs},
-    year = {2024},
-    doi = {10.5281/zenodo.11368913}
+@software{kapoor20243D,
+  author       = {Kapoor, Ankush and
+                  Ray, Tapabrata and
+                  Jepson, Nigel and
+                  Beier, Susann},
+  title        = {{3D geometry builder for Independent Ring and 
+                   Helical stent designs}},
+  month        = oct,
+  year         = 2024,
+  publisher    = {Zenodo},
+  version      = {0.0.1},
+  doi          = {10.5281/zenodo.11368913},
+  url          = {https://doi.org/10.5281/zenodo.11368913}
 }
 ```
 
