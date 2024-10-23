@@ -2,7 +2,7 @@
 
 ## Citing This Work
 
-If you use these geometry builders in your research, please cite the paper:
+If you use these geometry builders in your research, please cite the paper and the software using the Zenodo DOI:
 
 ```
 @article{Kapoor2024Comprehensive,
@@ -18,8 +18,6 @@ If you use these geometry builders in your research, please cite the paper:
     eprint = {https://asmedigitalcollection.asme.org/mechanicaldesign/article-pdf/doi/10.1115/1.4066961/7390188/md-24-1477.pdf},
 }
 ```
-
-You can also cite the software using the Zenodo DOI:
 
 ```
 @software{Kapoor20243D,
