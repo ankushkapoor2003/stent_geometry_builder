@@ -1,4 +1,28 @@
-# Stent Geometry Builders for IR and HS Designs
+# Stent Geometry Builders for Independent Ring (IR) and Helical Stent (HS) Designs
+
+## Citing This Work
+
+If you use these geometry builders in your research, please cite the paper:
+
+```
+@article{Kapoor2024Comprehensive,
+    author = {Kapoor, A. and Ray, T. and Jepson, N. and Beier, S.},
+    title = {Comprehensive Geometric Parameterization and Computationally Efficient 3D Shape Matching Optimization of Realistic Stents},
+    journal = {ASME Journal of Mechanical Design (In Print, Accepted-10/2024)},
+    year = {2024},
+}
+```
+
+You can also cite the software using the Zenodo DOI:
+
+```
+@software{Kapoor20243D,
+    author = {Kapoor, A. and Ray, T. and Jepson, N. and Beier, S.},
+    title = {3D geometry builder for Independent Ring and Helical stent designs},
+    year = {2024},
+    doi = {10.5281/zenodo.11368913}
+}
+```
 
 ## Overview
 
@@ -76,26 +100,3 @@ Similarly, the default solidworks template used for loading new document is assu
 5. Three stent CAD files - Solidworks part file (.SLDPRT), neutral parasolid file (.x_t) and a stl file (.STL) will be saved in the corresponding results folder for IR stent (IR1_Results) or HS stent (HS1_Results)
 
 
-## Citing This Work
-
-If you use these geometry builders in your research, condsider citing the paper:
-
-```
-@article{Kapoor2024Comprehensive,
-    author = {Kapoor, A. and Ray, T. and Jepson, N. and Beier, S.},
-    title = {Comprehensive Geometric Parameterization and Computationally Efficient 3D Shape Matching Optimization of Realistic Stents},
-    journal = {ASME Journal of Mechanical Design (In Print, Accepted-10/2024)},
-    year = {2024},
-}
-```
-
-You can also cite the software using the Zenodo DOI:
-
-```
-@software{Kapoor20243D,
-    author = {Kapoor, A. and Ray, T. and Jepson, N. and Beier, S.},
-    title = {3D geometry builder for Independent Ring and Helical stent designs},
-    year = {2024},
-    doi = {10.5281/zenodo.11368913}
-}
-```
