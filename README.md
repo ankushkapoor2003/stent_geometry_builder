@@ -6,10 +6,16 @@ If you use these geometry builders in your research, please cite the paper:
 
 ```
 @article{Kapoor2024Comprehensive,
-    author = {Kapoor, A. and Ray, T. and Jepson, N. and Beier, S.},
-    title = {Comprehensive Geometric Parameterization and Computationally Efficient 3D Shape Matching Optimization of Realistic Stents},
-    journal = {ASME Journal of Mechanical Design (In Print, Accepted-10/2024)},
+    author = {Kapoor, Ankush and Ray, Tapabrata and Jepson, Nigel and Beier, Susann},
+    title = "{Comprehensive Geometric Parameterization and Computationally Efficient 3D Shape Matching Optimization of Realistic Stents}",
+    journal = {Journal of Mechanical Design},
+    pages = {1-24},
     year = {2024},
+    month = {10},
+    issn = {1050-0472},
+    doi = {10.1115/1.4066961},
+    url = {https://doi.org/10.1115/1.4066961},
+    eprint = {https://asmedigitalcollection.asme.org/mechanicaldesign/article-pdf/doi/10.1115/1.4066961/7390188/md-24-1477.pdf},
 }
 ```
 
