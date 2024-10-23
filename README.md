@@ -2,7 +2,7 @@
 
 ## Citing This Work
 
-If you use these geometry builders in your research, please cite the paper and the software
+If you use these geometry builders in your research, please cite the paper and the software.
 
 Research paper citation:
 ```
