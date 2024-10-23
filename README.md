@@ -2,9 +2,9 @@
 
 ## Citing This Work
 
-If you use these geometry builders in your research, please cite the paper and the software using the Zenodo DOI
-Research paper citation:
+If you use these geometry builders in your research, please cite the paper and the software
 
+Research paper citation:
 ```
 @article{Kapoor2024Comprehensive,
     author = {Kapoor, Ankush and Ray, Tapabrata and Jepson, Nigel and Beier, Susann},
