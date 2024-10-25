@@ -144,7 +144,7 @@ def copy_move_vro(previous_row, axis, rel_z_shift,rel_theta_shift):# This versio
     new_row = swPartDoc.FeatureManager.InsertMoveCopyBody2(0, 0, 0, 0, 0, 0, 0, rel_theta_shift, 0, 0, False, 1)
     return new_row.name
 
-def reorient_ro(stent_name):# Reorient single helix stent to -y axis
+def reorient_sh(stent_name):# Reorient single helix stent to -y axis
     global swPartDoc, sw
     swPartDoc.ClearSelection2(True)
     swPartDoc.Extension.SelectByID2(stent_name, "SOLIDBODY", 0, 0, 0, False, 1, pythoncom.Nothing, 0)
