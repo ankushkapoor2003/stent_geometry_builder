@@ -37,11 +37,11 @@ Software citation:
   title        = {{3D geometry builder for Independent Ring and 
                    Helical stent designs}},
   month        = oct,
-  year         = 2024,
+  year         = 2025,
   publisher    = {Zenodo},
-  version      = {0.0.1},
-  doi          = {10.5281/zenodo.11368913},
-  url          = {https://doi.org/10.5281/zenodo.11368913}
+  version      = {0.0.2},
+  doi          = {10.5281/zenodo.15117426},
+  url          = {https://doi.org/10.5281/zenodo.15117426}
 }
 ```
 
