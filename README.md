@@ -4,7 +4,7 @@
 
 If you use these geometry builders in your research, please cite the paper and the software.
 
-Research paper citation:
+Research paper citations:
 ```
 @article{Kapoor2025Surrogate,
     author = {Kapoor, Ankush and Ray, Tapabrata and Jepson, Nigel and Beier, Susann},
