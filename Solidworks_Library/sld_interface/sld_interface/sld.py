@@ -54,6 +54,31 @@ def ps_to_stl(file_name, stl_file_path):
     success = activeDoc.SaveAs3(stl_file_path, 0, 2)
     sw.CloseDoc(activeDoc.GetTitle)
 
+def ps_to_stl_single_helix(file_name, stl_file_path):
+    global sw, swPartDoc
+    error = win32com.client.VARIANT(pythoncom.VT_BYREF | pythoncom.VT_I4, 0)
+    warning = win32com.client.VARIANT(pythoncom.VT_BYREF | pythoncom.VT_I4, 0)
+    doc = sw.LoadFile2(file_name, "")    
+    activeDoc = sw.ActiveDoc
+    body_array = activeDoc.GetBodies2(0,True)
+    body = body_array[0]
+    mesh_body = body.ConvertToMeshBody(False, False, False, 0.005, True, 0.0000073,0.472,True, 0.00012,-1)
+    success = activeDoc.SaveAs3(stl_file_path, 0, 2)
+    sw.CloseDoc(activeDoc.GetTitle)
+
+
+def ps_to_stl_ir2(file_name, stl_file_path):
+    global sw, swPartDoc
+    error = win32com.client.VARIANT(pythoncom.VT_BYREF | pythoncom.VT_I4, 0)
+    warning = win32com.client.VARIANT(pythoncom.VT_BYREF | pythoncom.VT_I4, 0)
+    doc = sw.LoadFile2(file_name, "")    
+    activeDoc = sw.ActiveDoc
+    body_array = activeDoc.GetBodies2(0,True)
+    body = body_array[0]
+    mesh_body = body.ConvertToMeshBody(False, False, False, 0.005, True, 0.01,0.5,True, 0.00011,-1)
+    success = activeDoc.SaveAs3(stl_file_path, 0, 2)
+    sw.CloseDoc(activeDoc.GetTitle)
+
 def openFile(sw, Path):
     ## With connection established (sw), opens part, assembly, or drawing file            
     f = sw.getopendocspec(Path)
@@ -144,7 +169,7 @@ def copy_move_vro(previous_row, axis, rel_z_shift,rel_theta_shift):# This versio
     new_row = swPartDoc.FeatureManager.InsertMoveCopyBody2(0, 0, 0, 0, 0, 0, 0, rel_theta_shift, 0, 0, False, 1)
     return new_row.name
 
-def reorient_sh(stent_name):# Reorient single helix stent to -y axis
+def reorient_ro(stent_name):# Reorient single helix stent to -y axis
     global swPartDoc, sw
     swPartDoc.ClearSelection2(True)
     swPartDoc.Extension.SelectByID2(stent_name, "SOLIDBODY", 0, 0, 0, False, 1, pythoncom.Nothing, 0)

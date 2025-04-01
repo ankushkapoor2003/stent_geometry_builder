@@ -6,6 +6,14 @@ If you use these geometry builders in your research, please cite the paper and t
 
 Research paper citation:
 ```
+@article{Kapoor2025Surrogate,
+    author = {Kapoor, Ankush and Ray, Tapabrata and Jepson, Nigel and Beier, Susann},
+    title = "{A Surrogate-Assisted Multi-Concept Optimization Framework for Real-World Engineering Design}",
+    journal = {Journal of Mechanical Design - Accepted 03/2025 (In Print)}
+}
+```
+
+```
 @article{Kapoor2024Comprehensive,
     author = {Kapoor, Ankush and Ray, Tapabrata and Jepson, Nigel and Beier, Susann},
     title = "{Comprehensive Geometric Parameterization and Computationally Efficient 3D Shape Matching Optimization of Realistic Stents}",
@@ -39,7 +47,7 @@ Software citation:
 
 ## Overview
 
-This repository contains the geometry builders for the IR1 and HS1 stent designs. These tools allow for the automated generation and customization of stent geometries based on specific input parameters.
+This repository contains the geometry builders for the IR1, IR2, HS1, and HS2 stent designs. These tools allow for the automated generation and customization of stent geometries based on specific input parameters.
 
 ## Setup Instructions
 
@@ -77,19 +85,23 @@ cd stent-geometry-builder
     ```conda
     conda activate Sldwrks_Integration
     ```
+4. In the anaconda prompt, navigate to the cloned directory location using cd command
+    ```conda
+    cd '\\ stent geometry builder location \\'
+    ```
 
-4. Install the sld_interface package and its dependencies in the Sldwrks_integration environment
+5. Install the sld_interface package and its dependencies in the Sldwrks_integration environment
     ```conda
     python -m pip install ".\Solidworks_library\sld_interface"
     ```
 
-5. Retrieve the location of the python executable of the conda environement using the following command
+6. Retrieve the location of the python executable of the conda environement using the following command
     ```conda
     where python
     ```
     The command may show multiple python locations, copy the path within your generated conda environment
 
-6. Open Matlab and change the matlab python environment to the newly generated one by running the following in command window
+7. Open Matlab and change the matlab python environment to the newly generated one by running the following in command window
     ```matlab
     pyenv('Version', '\\ Path to the python executable retrieved from step 5 \\')
     ```

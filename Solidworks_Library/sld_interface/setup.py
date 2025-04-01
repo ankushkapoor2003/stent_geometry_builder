@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='sld_interface',
-    version='0.0.1',
+    version='0.0.2',
     description='Integration of Solidworks API with Matlab using pywin32',
     url="https://github.com/ankushkapoor2003/stent_geometry_builder",
     author='Ankush',
